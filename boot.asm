@@ -13,11 +13,10 @@ global _start
 extern kernel_main
 
 _start:
-    ; Настраиваем стек
     mov esp, stack_space
     call kernel_main
     hlt
 
 section .bss
-resb 8192 ; 8KB под стек
+resb 8192 ; 8KB
 stack_space:
